@@ -26,17 +26,36 @@
         android:layout_alignLeft="@+id/main_input"
         android:layout_below="@id/main_input"
         android:layout_marginTop="31dp"
-        android:onClick="onClick"
+        android:onClick="button1onClick"
         android:text="Start"
         />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/main_input"
+        android:layout_below="@id/button1"
+        android:layout_marginTop="31dp"
+        android:onClick="button2onClick"
+        android:text="Image" />
+
+    <ImageView
+        android:id="@+id/pic1"
+        android:src="@drawable/orange"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/button2"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="16dp"
+        android:layout_alignEnd="@+id/button2" />
 
     <RadioGroup
         android:id="@+id/orientation"
-        android:layout_below="@id/button1"
+        android:layout_below="@id/pic1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp" >
 
         <RadioButton
             android:id="@+id/horizontal"

@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
         @Override
@@ -30,10 +31,16 @@ public class MainActivity extends Activity {
             });
         }
 
-    public void onClick (View view) {
+    public void button1onClick (View view) {
         EditText input = (EditText) findViewById(R.id.main_input);
         String string = input.getText().toString();
         Toast.makeText(this, string, Toast.LENGTH_LONG).show();
     }
+
+    public void button2onClick (View view) {
+        ImageView pic1 = (ImageView) findViewById(R.id.pic1);
+        pic1.setImageDrawable(getResources().getDrawable(R.drawable.blue, null));
+    }
+
 
 }
