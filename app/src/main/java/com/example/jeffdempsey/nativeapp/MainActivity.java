@@ -8,6 +8,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
 
 public class MainActivity extends Activity {
         @Override
@@ -28,8 +30,16 @@ public class MainActivity extends Activity {
                         break;
                     }
                 }
-            });
-        }
+        });
+        Spinner spinner = (Spinner) findViewById(R.id.ides);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.ides_array, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
+    }
 
     public void button1onClick (View view) {
         EditText input = (EditText) findViewById(R.id.main_input);
@@ -41,6 +51,5 @@ public class MainActivity extends Activity {
         ImageView pic1 = (ImageView) findViewById(R.id.pic1);
         pic1.setImageDrawable(getResources().getDrawable(R.drawable.blue, null));
     }
-
 
 }
