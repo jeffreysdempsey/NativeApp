@@ -1,87 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    tools:context="com.example.jeffdempsey.nativeapp.MainActivity">
+    android:fillViewport="true"
+    android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/main_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/main_input"
-        android:layout_below="@id/main_input"
-        android:layout_marginTop="31dp"
-        android:onClick="button1onClick"
-        android:text="Start"
-        />
-
-    <Spinner
-        android:id="@+id/ides"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/main_input"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/button1"
-        android:text="ides" >
-    </Spinner>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/main_input"
-        android:layout_below="@id/ides"
-        android:layout_marginTop="31dp"
-        android:onClick="button2onClick"
-        android:text="Image" />
-
-    <ImageView
-        android:id="@+id/pic1"
-        android:src="@drawable/orange"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/button2"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="16dp"
-        android:layout_alignEnd="@+id/button2" />
-
-    <RadioGroup
-        android:id="@+id/orientation"
-        android:layout_below="@id/pic1"
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
-        android:layout_alignLeft="@id/main_input"
+        android:orientation="vertical" >
 
-        <RadioButton
-            android:id="@+id/horizontal"
+        <TextView
+            android:id="@+id/TextView01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Horizontal" >
-        </RadioButton>
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="8dip"
+            android:text="This is a header"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+        </TextView>
 
-        <RadioButton
-            android:id="@+id/vertical"
+        <TextView
+            android:id="@+id/TextView02"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vertical" >
-        </RadioButton>
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="@+id/TextView02" >
+        </TextView>
 
-    </RadioGroup>
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Submit" >
+            </Button>
+
+            <Button
+                android:id="@+id/Button02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Cancel" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
