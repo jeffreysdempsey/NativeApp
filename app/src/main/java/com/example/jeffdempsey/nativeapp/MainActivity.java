@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
 public class MainActivity extends Activity {
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -28,8 +28,8 @@ public class MainActivity extends Activity {
                     case R.id.vertical:
                         group.setOrientation(LinearLayout.VERTICAL);
                         break;
-                    }
                 }
+            }
         });
         Spinner spinner = (Spinner) findViewById(R.id.ides);
         // Create an ArrayAdapter using the string array and a default spinner layout
